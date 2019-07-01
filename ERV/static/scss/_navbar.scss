@@ -1,9 +1,8 @@
 .navbar-nav {
-
   .form-inline .input-group {
     width: 100%;
   }
-
+ 
   .nav-item {
     &.active {
       .nav-link {
@@ -22,6 +21,8 @@
           content: '\f105';
           font-family: 'Font Awesome 5 Free';
         }
+      
+
       }
       &.show {
         .dropdown-toggle::after {
@@ -32,7 +33,9 @@
         .dropdown-toggle::after {
           display: none;
         }
+      
       }
+      
     }
     .nav-link {
       &:focus {
@@ -58,7 +61,6 @@
   }
 
 }
-
 .sidebar {
   width: $sidebar-collapsed-width !important;
   background-color: $gray-900;
@@ -105,6 +107,8 @@
       &.dropdown .dropdown-toggle::after {
         display: block;
       }
+      
+      
     }
     &.toggled {
       overflow: visible;

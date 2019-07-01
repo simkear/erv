@@ -3,13 +3,13 @@ from django.contrib.auth.decorators import login_required
 from django.contrib.auth.views import login_required
 from django.shortcuts import render
 from django.http import HttpResponseRedirect
-
-
+from accounts.models import Korisnik
 
 
 @login_required
 def home(request):
-    return render(request, "index.html", {})
+    context={'korisnik': Korisnik.objects.all()}
+    return render(request, "index.html", context, {})
 @login_required
 def tables(request):
     return render(request, "tables.html", {})
